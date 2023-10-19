@@ -1,4 +1,4 @@
-import Home from './components/home/Home';
+import HomePage from './Pages/HomePage/HomePage';
 import './styles/main/index.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         
       </header>
       <main className='c__main'>
-        <Home/>
+        <HomePage/>
       </main>
       <footer className='c__footer'>
 
