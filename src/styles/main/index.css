@@ -1,0 +1,17 @@
+@font-face {
+  font-family: GameOfThrones;
+  src: url("../../../public/assets/Game of Thrones.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: GameOfThrones;
+}
+
+.c__body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../../public/assets/Trono.png);
+  background-size: cover;
+}/*# sourceMappingURL=index.css.map */
