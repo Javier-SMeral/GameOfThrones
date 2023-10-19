@@ -1,20 +1,71 @@
 .c__body {
     width: 100vw;
     height: 100vh;
-    background-image: url(../../../public/assets/Trono.png);
-    background-size: cover;
-    background-position: center;
+    background-color: black;
     color: white;
 }
 
-.h__title{
-    font-size: 60px;
-    width: 470px;
-    align-items: center;
+.h__title {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../public/assets/Trono.png);
+    background-size: cover;
+    background-position: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.h__img{
-    margin-top: 300px;
-    margin-left: 550px;
+.h__flag {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.h__flag img {
+    width: 64px;
+    height: 64px;
+    margin: 0 29px 0 0;
+}
+
+.h__img {
+    width: 800px;
+    height: 310px;
+}
+
+.h__footer {
+    width: 90%;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.h__home {
+    width: 300px;
+    height: 30px;
+    color: white;
+}
+
+.h__characters {
+    width: 200px;
+    height: 30px;
+    color: white;
+}
+
+.h__houses {
+    width: 200px;
+    height: 30px;
+    color: white;
+}
+
+.h__chronology {
+    width: 200px;
+    height: 30px;
+    color: white;
 }
