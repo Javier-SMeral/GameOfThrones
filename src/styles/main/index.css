@@ -1,12 +1,13 @@
 @font-face {
-  font-family: GameOfThrones;
-  src: url("../../../public/assets/Game of Thrones.ttf");
+  font-family: "GameOfThrones";
+  src: url("../../../public/assets/Game_of_Thrones.ttf");
 }
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: GameOfThrones;
+  font-family: "GameOfThrones";
+  font-weight: normal;
 }
 
 .c__body {
@@ -26,6 +27,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.h__game {
+  width: 845px;
+  font-size: 150px;
 }
 
 .h__flag {
