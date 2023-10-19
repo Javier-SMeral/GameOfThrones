@@ -2,8 +2,8 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div>
-            
+        <div className='h__title'>
+            <h1>GAMES OF THRONES</h1>
         </div>
     )
 }

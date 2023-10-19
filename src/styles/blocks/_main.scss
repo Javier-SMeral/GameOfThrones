@@ -1,6 +1,14 @@
-.c__body{
+.c__body {
     width: 100vw;
     height: 100vh;
     background-image: url(../../../public/assets/Trono.png);
     background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.h__title{
+    font-size: 60px;
+    width: 470px;
+    display: flex;
 }
