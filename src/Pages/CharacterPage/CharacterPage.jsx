@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
+
 
 export default function CharactersPage() {
 
@@ -20,20 +24,24 @@ export default function CharactersPage() {
     }, []);
 
     return (
-        <div>
-            <h1>Characters Page</h1>
-            <div>
+        <div >
+            <h1 className="character_h1">Characters Page</h1>
+            <SimpleBar style={{ maxHeight: 1050, width: '95%' }}>
 
-                {characters.map((character, i) => (
-                    <div key={ i }>
-                        <img src={character.image} alt="" style={{ width: '200px' }} />
-                        <p>{character.name}</p>
-                    </div>
-                ))
-                    
-                }
-
-        </div>
+                <div className="characters_container">
+                    {characters.map((character, i) => (
+                        <div className="characters_card" key={i}>
+                            <Link to={`/character/${character.id}`}>
+                                <img src={character.image} alt="" />
+                                <div className="character-overlay">
+                                    <div className="textOverlay">{character.name}</div>
+                                </div>
+                            </Link>    
+                        </div>
+                    ))}
+                </div>
+            </SimpleBar >
         </div >
     );
 }
+

@@ -5,6 +5,8 @@ import CharactersPage from './Pages/CharacterPage/CharacterPage';
 import HousesPage from './Pages/HousesPage/HousesPage'
 import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
 import Menu from './components/Menu/Menu';
+import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
+
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
           <Route path="/characters" element={<CharactersPage />} />
           <Route path="/houses" element={<HousesPage />} />
           <Route path="/chronology" element={<ChronologyPage />} />
+          <Route path="/character/:id" component={<DetailsCharacterPage />} />
         </Routes>
       </Router>
     </body>
+
 
   );
 }
