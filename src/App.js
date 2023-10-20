@@ -1,3 +1,4 @@
+
 import './styles/main/index.css';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
@@ -23,7 +24,6 @@ function App() {
         </Routes>
       </Router>
     </body>
-
 
   );
 }
