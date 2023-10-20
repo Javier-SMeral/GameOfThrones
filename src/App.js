@@ -1,11 +1,10 @@
 import './styles/main/index.css';
-import './App.css';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import CharactersPage from './Pages/CharacterPage/CharacterPage';
 import HousesPage from './Pages/HousesPage/HousesPage'
 import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
-import Menu from './Components/Menu/Menu';
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (

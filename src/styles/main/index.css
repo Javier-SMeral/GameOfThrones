@@ -12,6 +12,26 @@
 .c__body {
   width: 100vw;
   height: 100vh;
-  background-image: url(../../../public/assets/Trono.png);
-  background-size: cover;
+  background-color: black;
 }/*# sourceMappingURL=index.css.map */
+
+.HouseCard {
+  width: 250px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.HouseGallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin: 156px;
+}
+
+.HouseCard img {
+  width: 100%
+}
