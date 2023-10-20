@@ -15,31 +15,41 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    .h__flag {
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+
+        .h__spain{
+            width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        }
+
+        .h__uk{
+            width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        }
+    }
+
+    .h__game {
+        width: 845px;
+        font-size: 150px;
+    }
 }
 
-.h__game{
-    width: 845px;
-    font-size: 150px;
-}
+// .h__flag img {
+//     width: 64px;
+//     height: 64px;
+//     margin: 0 29px 0 0;
+// }
 
-.h__flag {
-    width: 90%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-
-.h__flag img {
-    width: 64px;
-    height: 64px;
-    margin: 0 29px 0 0;
-}
-
-.h__img {
-    width: 800px;
-    height: 310px;
-}
+// .h__img {
+//     width: 800px;
+//     height: 310px;
+// }
 
 .h__footer {
     width: 90%;
@@ -49,28 +59,29 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+
+    .h__home {
+        width: 300px;
+        height: 30px;
+        color: white;
+    }
+    
+    .h__characters {
+        width: 200px;
+        height: 30px;
+        color: white;
+    }
+    
+    .h__houses {
+        width: 200px;
+        height: 30px;
+        color: white;
+    }
+    
+    .h__chronology {
+        width: 200px;
+        height: 30px;
+        color: white;
+    }
 }
 
-.h__home {
-    width: 300px;
-    height: 30px;
-    color: white;
-}
-
-.h__characters {
-    width: 200px;
-    height: 30px;
-    color: white;
-}
-
-.h__houses {
-    width: 200px;
-    height: 30px;
-    color: white;
-}
-
-.h__chronology {
-    width: 200px;
-    height: 30px;
-    color: white;
-}

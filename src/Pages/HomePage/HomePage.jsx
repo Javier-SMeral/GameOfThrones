@@ -5,8 +5,10 @@ const HomePage = () => {
     return (
         <div className='h__title'>
             <div className='h__flag'>
-                <img className='h__spain' src='../../../assets/spain-1.png' alt='spain' />
-                <img className='h__uk' src='../../../assets/united-kingdom-1.png' alt='united kingdom' />
+                <img src='../../../assets/spain-1.png' alt='spain' />
+                {/* <button className='h__spain' /><button /> */}
+                <img src='../../../assets/united-kingdom-1.png' alt='united kingdom' />
+                {/* <button className='h__uk' /><button /> */}
             </div>
             <h1 className='h__game'>GAME OF THRONES</h1>
             {/* <img className='h__img' src='../../../assets/Game-of-Thrones-Logo.png' alt='Game of thrones' /> */}
