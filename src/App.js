@@ -1,15 +1,15 @@
 import './styles/main/index.css';
-import './App.css';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import CharactersPage from './Pages/CharacterPage/CharacterPage';
 import HousesPage from './Pages/HousesPage/HousesPage'
 import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
-import Menu from './Components/Menu/Menu';
+import Menu from './components/Menu/Menu';
+import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
 
 function App() {
   return (
-    
+
     <body className='c__body'>
       <header className='c__header'>
         <Router>
@@ -23,12 +23,13 @@ function App() {
                 <Route path="/characters" element={<CharactersPage />} />
                 <Route path="/houses" element={<HousesPage />} />
                 <Route path="/chronology" element={<ChronologyPage />} />
+                <Route path="/character/:id" component={<DetailsCharacterPage />} />
               </Routes>
 
             </div>
           </div>
         </Router>
-    </header>
+      </header>
       <main className='c__main'>
 
       </main>
