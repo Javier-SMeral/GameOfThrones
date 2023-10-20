@@ -7,7 +7,6 @@ import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
 import Menu from './components/Menu/Menu';
 import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
 
-
 function App() {
   return (
 
