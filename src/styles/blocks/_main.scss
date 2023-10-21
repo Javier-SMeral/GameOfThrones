@@ -22,16 +22,16 @@
         display: flex;
         justify-content: flex-end;
 
-        .h__spain{
+        .h__spain {
             width: 90%;
-        display: flex;
-        justify-content: flex-end;
+            display: flex;
+            justify-content: flex-end;
         }
 
-        .h__uk{
+        .h__uk {
             width: 90%;
-        display: flex;
-        justify-content: flex-end;
+            display: flex;
+            justify-content: flex-end;
         }
     }
 
@@ -66,19 +66,19 @@
         height: 30px;
         color: white;
     }
-    
+
     .h__characters {
         width: 200px;
         height: 30px;
         color: white;
     }
-    
+
     .h__houses {
         width: 200px;
         height: 30px;
         color: white;
     }
-    
+
     .h__chronology {
         width: 200px;
         height: 30px;
@@ -86,9 +86,10 @@
     }
 }
 
+
+//CHARACTERS PAGE
 .character_h1 {
     text-align: center;
-    padding-top: 50px;
     padding-bottom: 20px;
     font-size: 30px;
 
@@ -96,16 +97,12 @@
 
 .characters_container {
     width: 80%;
-    /* Ancho del contenedor, puedes ajustar según tus necesidades */
     margin: 0 auto;
     margin-right: 70px;
-    padding: 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    // overflow: hidden;
-    // grid-template-rows: repeat(4, 1fr); 
-    // gap: 1px;
 
     .characters_card {
         position: relative;
@@ -119,8 +116,8 @@
 
     img {
         display: block;
-        width: 300px;
-        height: 450px;
+        width: 250px;
+        height: 360px;
         object-fit: cover;
 
     }
@@ -131,7 +128,7 @@
         background-color: #2b2b2b72;
         overflow: hidden;
         bottom: 20px;
-        width: 300px;
+        width: 250px;
         height: 0;
         transition: .3s ease;
         color: white;
@@ -160,21 +157,214 @@ img:hover {
     filter: grayscale(50%);
 }
 
+//FILTER
+input {
+    margin-left: 300px;
+    margin-bottom: 20px;
+    width: 15%;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.635);
+}
 
-// Estilo del riel de la barra de desplazamiento
+
+
+//SIMPLEBAR
 .simplebar-track {
-    background-color: rgba(77, 77, 77, 0.503); // Color de fondo del riel 
-    border-radius: 8px; // Bordes redondeados del riel 
+    background-color: rgba(77, 77, 77, 0.503); 
+    border-radius: 8px;
 }
 
-// Estilo de la barra de desplazamiento
 .simplebar-scrollbar {
-    background-color: #909090; // Color de fondo de la barra de desplazamiento 
-    border-radius: 8px; // Bordes redondeados de la barra de desplazamiento 
+    background-color: #909090; 
+    border-radius: 8px; 
 }
 
-// Cambia el color al hacer hover sobre la barra de desplazamiento 
 .simplebar-scrollbar:hover {
     background-color: #cdcdcd;
+}
+
+
+//VOLVER BUTTON
+.h__volver {
+    width: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+}
+
+//ESTILOS DETAILS CHARACTER
+.characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    
+    .character {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+
+        .character-image {
+            display: block;
+            width: 250px;
+            height: 360px;
+            object-fit: cover;
+        }
+
+        .character-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .character-name {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    }
+
+    .character-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 200px;
+        max-width: 80%;
+        list-style-type: circle;
+        
+
+        .ci__house {
+            text-align: center;
+            width: 350px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            .detail__img {
+                display: block;
+                margin-left: 80px;
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__alliance {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__episodes {
+            text-align: start;
+            width: 400px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__parents {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__siblings {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__titles {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+    }
 }
 
