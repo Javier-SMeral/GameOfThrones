@@ -27,18 +27,9 @@
             height: 64px;
             margin: 0 29px 0 0;
         }
-
-        // .h__spain{
-        //     width: 90%;
-        // display: flex;
-        // justify-content: flex-end;
-        // }
-
-        // .h__uk{
-        //     width: 90%;
-        // display: flex;
-        // justify-content: flex-end;
-        // }
+        
+        #h__home{
+        }
     }
 
     .h__game {
@@ -62,12 +53,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-
-    .h__home {
-        width: 300px;
-        height: 30px;
-        color: white;
-    }
 
     .h__characters {
         width: 200px;
@@ -222,7 +207,7 @@ img:hover {
 }
 
 #v__card {
-    
+
     div img {
         border-radius: 50%;
         width: 64px;
