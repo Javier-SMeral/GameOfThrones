@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "GameOfThrones";
   src: url("../../../public/assets/Game_of_Thrones.ttf");
@@ -41,21 +40,36 @@
   display: flex;
   justify-content: flex-end;
 }
-.h__flag img {
-  width: 64px;
-  height: 64px;
-  margin: 0 29px 0 0;
-  cursor: pointer;
+.h__flag .h__spain {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.h__flag .h__uk {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.h__game {
+  width: 845px;
+  font-size: 150px;
 }
 
 .h__footer {
-  width: 90%;
+  width: 70%;
+  margin-left: 280px;
   font-size: 1.5rem;
-  margin-bottom: 50px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+.h__footer .h__home {
+  width: 300px;
+  height: 30px;
+  color: white;
 }
 .h__footer .h__characters {
   width: 200px;
@@ -146,45 +160,169 @@ img:hover {
   background-color: #cdcdcd;
 }
 
-.c__characters {
+.h__volver {
+  margin-right: 1200px;
+  width: 10%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.characters {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  /* Ajusta la altura según sea necesario */
-  background-color: #f0f0f0;
-  /* Color de fondo de la pantalla */
-  /* Estilo para cada casa */
+  padding-top: 20px;
 }
-.c__characters .c__character {
-  background-color: white;
-  margin: 10px;
-  padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  /* Estilo para la imagen de la casa */
-  /* Estilo para el nombre de la casa */
-  /* Estilo para los detalles de la casa */
-  /* Estilo para los detalles de cada elemento (settlement, region, etc.) */
+.characters .character .character-image {
+  margin-left: 50px;
+  display: block;
+  width: 150px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.c__characters .c__character .c__character-image {
-  max-width: 100%;
-  height: auto;
+.characters .character .character-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.c__characters .c__character .c__character-name {
+.characters .character .character-name {
   font-size: 24px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-.c__characters .c__character .c__character-details {
   margin-top: 20px;
 }
-.c__characters .c__character .c__character-details div {
-  margin: 5px 0;
+.characters .character-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 80%;
+  list-style-type: circle;
+}
+.characters .character-details .ci__house {
+  text-align: center;
+  width: 350px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__house .detail__img {
+  display: block;
+  margin-left: 80px;
+  width: 200px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.characters .character-details .ci__house h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__house ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__alliance {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__alliance h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__alliance ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__episodes {
+  text-align: start;
+  width: 400px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__episodes h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__episodes ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__parents {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__parents h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__parents ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__siblings {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__siblings h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__siblings ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__titles {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__titles h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__titles ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
 }
 
-#v__card div img {
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
+#filter {
+  display: flex;
+  justify-content: start;
+}
+#filter img {
+  margin-left: 270px;
+  height: auto;
+}
+#filter input {
+  margin-left: 10px;
+  width: 240px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.555);
 }/*# sourceMappingURL=index.css.map */

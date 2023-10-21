@@ -28,13 +28,24 @@
     display: flex;
     justify-content: flex-end;
 
-    img {
-        width: 64px;
-        height: 64px;
-        margin: 0 29px 0 0;
-        cursor: pointer;
+        .h__spain{
+            width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        }
+
+        .h__uk{
+            width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        }
     }
-}
+
+    .h__game {
+        width: 845px;
+        font-size: 150px;
+    }
+
 
 // .h__img {
 //     width: 800px;
@@ -42,14 +53,21 @@
 // }
 
 .h__footer {
-    width: 90%;
+    width: 70%;
+    margin-left: 280px;
     font-size: 1.5rem;
-    margin-bottom: 50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 
+    .h__home {
+        width: 300px;
+        height: 30px;
+        color: white;
+    }
+    
     .h__characters {
         width: 200px;
         height: 30px;
@@ -142,7 +160,8 @@ img:hover {
     filter: grayscale(50%);
 }
 
-// Estilo del riel de la barra de desplazamiento
+
+// SIMPLEBAR
 .simplebar-track {
     background-color: rgba(77, 77, 77, 0.503); 
     border-radius: 8px;
@@ -157,53 +176,203 @@ img:hover {
     background-color: #cdcdcd;
 }
 
-.c__characters {
+
+//VOLVER BUTTON
+.h__volver {
+    margin-right: 1200px;
+    width: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+}
+
+//ESTILOS DETAILS CHARACTER
+.characters {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* Ajusta la altura según sea necesario */
-    background-color: #f0f0f0;
-    /* Color de fondo de la pantalla */
+    padding-top: 20px;
+    
+    .character {
 
-    /* Estilo para cada casa */
-    .c__character {
-        background-color: white;
-        margin: 10px;
-        padding: 20px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-
-        /* Estilo para la imagen de la casa */
-        .c__character-image {
-            max-width: 100%;
-            height: auto;
+        .character-image {
+            margin-left: 50px;
+            display: block;
+            width: 150px;
+            height: 260px;
+            object-fit: cover;
         }
 
-        /* Estilo para el nombre de la casa */
-        .c__character-name {
+        .character-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .character-name {
             font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        /* Estilo para los detalles de la casa */
-        .c__character-details {
             margin-top: 20px;
+            
+        
+        }
+    }
+
+    .character-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 80%;
+        list-style-type: circle;
+        
+
+        .ci__house {
+            text-align: center;
+            width: 350px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            .detail__img {
+                display: block;
+                margin-left: 80px;
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
         }
 
-        /* Estilo para los detalles de cada elemento (settlement, region, etc.) */
-        .c__character-details div {
-            margin: 5px 0;
+        .ci__alliance {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__episodes {
+            text-align: start;
+            width: 400px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__parents {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__siblings {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__titles {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
         }
     }
 }
 
-#v__card {
+//FILTER
+#filter {
+    display: flex;
+    justify-content: start;
 
-    div img {
-        border-radius: 50%;
-        width: 64px;
-        height: 64px;
+    img {
+        margin-left: 270px;
+        height: auto;
+    }
+
+    input {
+        margin-left: 10px;
+        width: 240px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.555);
     }
 }
