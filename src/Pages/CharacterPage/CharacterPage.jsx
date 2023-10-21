@@ -40,18 +40,18 @@ function CharactersPage({ t }) {
 
         <div >
 
+                    
             <div ClassName = "h__volver">
-                <Link className='h__volver' to="/home">
-                <img src="/assets/arrowBack.png" alt="arrow" style={{ width: '30px' }}></img>
-                <p>Vuelve</p>
-                </Link>
+            
+                
+                <MenuHead />
             </div>
-            <h1 className="character_h1">Characters Page</h1>
-
-            <FilterPage onSearch={handleSearch} />
-            <SimpleBar style={{ maxHeight: 700, width: '90%' }}>
-            <MenuHead />
+            
             <h1 className="character_h1">{t('ch_page')}</h1>
+            <FilterPage onSearch={handleSearch} />
+            <SimpleBar style={{ maxHeight: 650, width: '90%' }}>
+            
+            
 
                 <div className="characters_container">
                 {filteredCharacters.map((character, i) => (

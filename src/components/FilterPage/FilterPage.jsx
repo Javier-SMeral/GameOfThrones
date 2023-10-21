@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { withTranslation } from 'react-i18next';
 
-export default function FilterPage({ onSearch }) {
+function FilterPage({ onSearch, t }) {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleSearch = (event) => {
@@ -10,11 +11,16 @@ export default function FilterPage({ onSearch }) {
     };
 
     return (
-        <input ClassName="filter"
-            type="text"
-            placeholder="Buscar personajes..."
-            value={searchTerm}
-            onChange={handleSearch}
-        />
+        <div id="filter">
+            <img src="../../../assets/icons8-lupa-30.png" alt="" />
+            <input 
+                type="text"
+                placeholder={t('search')}
+                value={searchTerm}
+                onChange={handleSearch}
+            />
+        </div>
     );
 }
+
+export default withTranslation()(FilterPage)

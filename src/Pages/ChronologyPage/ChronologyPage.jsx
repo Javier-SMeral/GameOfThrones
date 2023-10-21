@@ -1,10 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ViewAgeCharacter from "./ViewAgeCharacter";
-<<<<<<< HEAD
-// import OrderAge from "../../components/OrderAge";
-=======
->>>>>>> 1df835e685a7f43b9924ff979630938cba74c78f
+
+
 
 function ChronologyPage() {
   const [infoApi, setInfoApi] = useState([])
