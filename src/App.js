@@ -20,7 +20,8 @@ function App({ t }) {
           <Route path="/characters" element={<CharactersPage />} />
           <Route path="/houses" element={<HousesPage />} />
           <Route path="/chronology" element={<ChronologyPage />} />
-          <Route path="/character/:id" component={<DetailsCharacterPage />} />
+          <Route path="/characters/:id" element={<DetailsCharacterPage />} />
+          
         </Routes>
       </Router>
     </body>

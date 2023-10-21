@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from "axios";
+
 
 export default function DetailsCharacterPage() {
     const { id } = useParams();
     const [character, setCharacter] = useState(null);
-
+    
     useEffect(() => {
         const getCharacter = async () => {
             try {
@@ -18,8 +20,21 @@ export default function DetailsCharacterPage() {
         getCharacter();
     }, [id]);
 
-    if (!character) {
-        // Muestra un mensaje de carga o error si los datos aún no se han cargado
+    const [houses, setHouses] = useState();
+
+    useEffect(() => {
+        const getHouses = async () => {
+            const res = await axios(`http://localhost:3000/houses/`);
+            setHouses(res.data);
+        };
+        getHouses();
+    }, []);
+
+    useEffect(() => {
+        console.log(houses);
+    }, [houses]);
+
+    if (!character || !houses) {
         return <div>Cargando datos o error en la carga.</div>;
     }
 
@@ -46,4 +61,3 @@ export default function DetailsCharacterPage() {
         </div>
     );
 }
-

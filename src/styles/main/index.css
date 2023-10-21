@@ -6,7 +6,7 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
   font-family: "GameOfThrones";
   font-weight: normal;
   text-decoration: none;
@@ -75,17 +75,15 @@
 
 .character_h1 {
   text-align: center;
-  padding-top: 50px;
   padding-bottom: 20px;
   font-size: 30px;
 }
 
 .characters_container {
   width: 80%;
-  /* Ancho del contenedor, puedes ajustar según tus necesidades */
   margin: 0 auto;
   margin-right: 70px;
-  padding: 20px;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
@@ -101,8 +99,8 @@
 }
 .characters_container img {
   display: block;
-  width: 300px;
-  height: 450px;
+  width: 250px;
+  height: 360px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -112,7 +110,7 @@
   background-color: rgba(43, 43, 43, 0.4470588235);
   overflow: hidden;
   bottom: 20px;
-  width: 300px;
+  width: 250px;
   height: 0;
   transition: 0.3s ease;
   color: white;
