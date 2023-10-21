@@ -24,16 +24,16 @@ export default function DetailsCharacterPage() {
     }
 
     return (
-        <div className="characters">
-            <div key={character.id} className="character">
+        <div className="c__characters">
+            <div key={character.id} className="c__character">
                 <img
-                    className="character-image"
+                    className="c__character-image"
                     src={`http://localhost:3000${character.image}`}
                     alt={character.name}
                 />
-                <div className="character-info">
-                    <h1 className="character-name">{character.name}</h1>
-                    <div className="character-details">
+                <div className="c__character-info">
+                    <h1 className="c__character-name">{character.name}</h1>
+                    <div className="c__character-details">
                         <h3><strong>Alliances:</strong> {character.alliances}</h3>
                         <h3><strong>Episodes:</strong> {character.episodes}</h3>
                         <h3><strong>Parents:</strong> {character.parents}</h3>
@@ -42,6 +42,7 @@ export default function DetailsCharacterPage() {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import { withTranslation } from 'react-i18next';
+import MenuFoot from "../../components/Menu/MenuFoot";
+import MenuHead from "../../components/Menu/MenuHead";
 
-
-export default function CharactersPage() {
+function CharactersPage({ t }) {
 
     const [characters, setCharacters] = useState([]);
 
@@ -26,9 +28,9 @@ export default function CharactersPage() {
 
     return (
         <div >
-            <h1 className="character_h1">Characters Page</h1>
+            <MenuHead />
+            <h1 className="character_h1">{t('ch_page')}</h1>
             <SimpleBar style={{ maxHeight: 1050, width: '95%' }}>
-
                 <div className="characters_container">
                     {characters.map((character, i) => (
                         <div className="characters_card" key={i}>
@@ -37,11 +39,13 @@ export default function CharactersPage() {
                                 <div className="character-overlay">
                                     <div className="textOverlay">{character.name}</div>
                                 </div>
-                            </Link>    
+                            </Link>
                         </div>
                     ))}
                 </div>
-            </SimpleBar >
-        </div >
+            </SimpleBar>
+            <MenuFoot />
+        </div>
     );
 }
+export default withTranslation()(CharactersPage)
