@@ -17,28 +17,24 @@
     justify-content: space-between;
     align-items: center;
 
-    .h__flag {
-        width: 90%;
-        display: flex;
-        justify-content: flex-end;
-
-        img {
-            width: 64px;
-            height: 64px;
-            margin: 0 29px 0 0;
-        }
-        
-        #h__home{
-        }
-    }
-
     .h__game {
         width: 900px;
         font-size: 150px;
     }
 }
 
+.h__flag {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
 
+    img {
+        width: 64px;
+        height: 64px;
+        margin: 0 29px 0 0;
+        cursor: pointer;
+    }
+}
 
 // .h__img {
 //     width: 800px;

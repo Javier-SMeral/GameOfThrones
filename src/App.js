@@ -8,7 +8,9 @@ import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
 import { withTranslation } from 'react-i18next';
 import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
 
+
 function App({ t }) {
+  
   return (
     <body className='c__body'>
     

@@ -8,7 +8,7 @@ import { withTranslation } from 'react-i18next';
 import MenuFoot from "../../components/Menu/MenuFoot";
 import MenuHead from "../../components/Menu/MenuHead";
 
-function CharactersPage({t}) {
+function CharactersPage({ t }) {
 
     const [characters, setCharacters] = useState([]);
 
@@ -20,7 +20,7 @@ function CharactersPage({t}) {
                 image: `http://localhost:3000${character.image}`
             }));
             setCharacters(imageURLs);
-            
+
         }
 
         getCharacter();
@@ -28,10 +28,9 @@ function CharactersPage({t}) {
 
     return (
         <div >
-        <MenuHead />
+            <MenuHead />
             <h1 className="character_h1">{t('ch_page')}</h1>
             <SimpleBar style={{ maxHeight: 1050, width: '95%' }}>
-
                 <div className="characters_container">
                     {characters.map((character, i) => (
                         <div className="characters_card" key={i}>
@@ -40,7 +39,7 @@ function CharactersPage({t}) {
                                 <div className="character-overlay">
                                     <div className="textOverlay">{character.name}</div>
                                 </div>
-                            </Link>    
+                            </Link>
                         </div>
                     ))}
                 </div>

@@ -1,12 +1,13 @@
 import React from 'react';
-import MenuHead from '../../components/Menu/MenuHead';
 import MenuFoot from '../../components/Menu/MenuFoot';
 import { withTranslation } from 'react-i18next';
+import MenuHome from '../../components/Menu/MenuHome';
 
-const HomePage = ({t}) => {
+const HomePage = ({ t }) => {
+
     return (
         <div className='h__title'>
-            <MenuHead />
+            <MenuHome />
             <div >
                 <h1 className='h__game'>{t('game')}</h1>
             </div>
