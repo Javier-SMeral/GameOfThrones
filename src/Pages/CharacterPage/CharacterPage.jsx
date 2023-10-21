@@ -24,6 +24,7 @@ export default function CharactersPage() {
         }
 
         getCharacter();
+        
     }, []);
 
     const handleSearch = (searchTerm) => {
