@@ -1,6 +1,6 @@
 const ViewAgeCharacter = ({ age, name, img }) => {
   return (
-    <div>
+    <div id="v__card">
       <p>{age}</p>
       <p>{name}</p>
       <div style={{ width: "200px", height:"300px" }}>
