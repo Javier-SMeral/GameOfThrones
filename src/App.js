@@ -1,20 +1,22 @@
-
 import './styles/main/index.css';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import CharactersPage from './Pages/CharacterPage/CharacterPage';
 import HousesPage from './Pages/HousesPage/HousesPage'
 import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
-import Menu from './components/Menu/Menu';
-import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage'
+import { withTranslation } from 'react-i18next';
+import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
 
-function App() {
+
+
+function App({ t }) {
+  
   return (
-
     <body className='c__body'>
+    
       <Router>
+
       
-      <Menu />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/characters" element={<CharactersPage />} />
@@ -25,8 +27,7 @@ function App() {
         </Routes>
       </Router>
     </body>
-
   );
 }
 
-export default App;
+export default withTranslation()(App);

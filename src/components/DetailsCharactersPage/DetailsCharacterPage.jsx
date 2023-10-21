@@ -39,6 +39,7 @@ export default function DetailsCharacterPage() {
     }
 
     return (
+<<<<<<< HEAD
         <div >
             <div ClassName = "h__volver">
                 <Link className='h__volver' to="/characters">
@@ -49,11 +50,16 @@ export default function DetailsCharacterPage() {
 
         <div className="characters">
             <div className="character">
+=======
+        <div className="c__characters">
+            <div key={character.id} className="c__character">
+>>>>>>> 1df835e685a7f43b9924ff979630938cba74c78f
                 <img
-                    className="character-image"
+                    className="c__character-image"
                     src={`http://localhost:3000${character.image}`}
                     alt={character.name}
                 />
+<<<<<<< HEAD
                 <h1 className="character-name">{character.name}</h1>
             </div>
 
@@ -116,9 +122,20 @@ export default function DetailsCharacterPage() {
                             </ul>
                         </div>
                     
+=======
+                <div className="c__character-info">
+                    <h1 className="c__character-name">{character.name}</h1>
+                    <div className="c__character-details">
+                        <h3><strong>Alliances:</strong> {character.alliances}</h3>
+                        <h3><strong>Episodes:</strong> {character.episodes}</h3>
+                        <h3><strong>Parents:</strong> {character.parents}</h3>
+                        <h3><strong>Siblings:</strong> {character.siblings}</h3>
+                        <h3><strong>Titles:</strong> {character.titles}</h3>
+>>>>>>> 1df835e685a7f43b9924ff979630938cba74c78f
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }
