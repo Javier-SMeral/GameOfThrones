@@ -7,7 +7,6 @@ import FilterPage from "../../components/FilterPage/FilterPage";
 import { withTranslation } from 'react-i18next';
 import MenuFoot from "../../components/Menu/MenuFoot";
 import MenuHead from "../../components/Menu/MenuHead";
-import FilterPage from "../../components/FilterPage/FilterPage";
 
 
 function CharactersPage({ t }) {
