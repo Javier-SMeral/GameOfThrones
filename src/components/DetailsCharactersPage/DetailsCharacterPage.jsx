@@ -1,57 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import axios from "axios";
-
+import MenuHead from "../../components/Menu/MenuHead";
 
 export default function DetailsCharacterPage() {
     const { id } = useParams();
     const [character, setCharacter] = useState(null);
-    
+
+    const [house, setHouse] = useState(null); 
+
     useEffect(() => {
-        const getCharacter = async () => {
+        const getCharacterAndHouse = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:3000/characters/${id}`);
-                setCharacter(data);
+                const characterResponse = await axios.get(`http://localhost:3000/characters/${id}`);
+                setCharacter(characterResponse.data);
+
+                // Filtrar la casa correspondiente al personaje
+                const houseResponse = await axios.get(`http://localhost:3000/houses`);
+                const matchingHouse = houseResponse.data.find(h => h.name === characterResponse.data.house);
+                setHouse(matchingHouse);
             } catch (error) {
                 console.error(error);
             }
         };
-        getCharacter();
+        getCharacterAndHouse();
     }, [id]);
 
-    const [houses, setHouses] = useState();
-
-    useEffect(() => {
-        const getHouses = async () => {
-            const res = await axios(`http://localhost:3000/houses/`);
-            const imageURLs = res.data.map(houses => ({
-                ...houses,
-                image: `http://localhost:3000${houses.image}`
-            }));
-            setHouses(imageURLs);
-        };
-    
-        getHouses(); 
-    }, []);
-    
-    useEffect(() => {
-        console.log(houses);
-    }, [houses]);
-    
-    if (!character || !houses) {
+    if (!character || !house) {
         return <div>Cargando datos o error en la carga.</div>;
     }
+
 
     return (
 
         <div>
-            <div ClassName="h__volver">
-                <Link className='h__volver' to="/characters">
-                    <img ClassName="detail__img" src="/assets/arrowBack.png" alt="arrow" style={{ width: '30px' }}></img>
-                    <p>Vuelve</p>
-                </Link>
-            </div>
+
+            <MenuHead />
 
             <div className="characters">
                 <div className="character">
@@ -73,8 +57,8 @@ export default function DetailsCharacterPage() {
                                 <div className="ci__house">
                                     <h3>House: </h3>
                                         {character.house && <img
-                                            src={`http://localhost:3000${houses.image}`}
-                                            alt={houses.name}
+                                            src={`http://localhost:3000${house.image}`}
+                                            alt={house.name}
                                         />}
                                 </div>
 
