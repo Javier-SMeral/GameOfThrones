@@ -25,7 +25,7 @@ export default function CharactersPage() {
     }, []);
 
     return (
-        <div >
+        <div>
             <h1 className="character_h1">Characters Page</h1>
             <SimpleBar style={{ maxHeight: 1050, width: '95%' }}>
 
@@ -41,7 +41,7 @@ export default function CharactersPage() {
                         </div>
                     ))}
                 </div>
-            </SimpleBar >
-        </div >
+            </SimpleBar>
+        </div>
     );
 }

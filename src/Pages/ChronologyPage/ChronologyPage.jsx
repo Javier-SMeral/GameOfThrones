@@ -1,4 +1,4 @@
-import axios from "axios";
+/*import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ViewAgeCharacter from "./ViewAgeCharacter";
 import OrderAge from "../../components/OrderAge";
@@ -68,4 +68,4 @@ function ChronologyPage() {
   );
 }
 
-export default ChronologyPage;
+export default ChronologyPage;*/
