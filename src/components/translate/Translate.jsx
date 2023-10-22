@@ -9,7 +9,8 @@ const resources = {
             'houses': 'HOUSES',
             'chronology': 'CHRONOLOGY',
             'game': 'GAME OF THRONES',
-            'ch_page': 'Character Page'
+            'ch_page': 'Character Page',
+            'search': 'Search Character'
         }
     },
     es: {
@@ -19,7 +20,8 @@ const resources = {
             'houses': 'CASAS',
             'chronology': 'CRONOLOGIA',
             'game': 'JUEGO DE TRONOS',
-            'ch_page': 'Pagina de Personajes'
+            'ch_page': 'Pagina de Personajes',
+            'search': 'Buscar Personaje'
         }
     },
 }

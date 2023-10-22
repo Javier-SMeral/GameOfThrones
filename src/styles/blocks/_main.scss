@@ -27,14 +27,26 @@
     width: 90%;
     display: flex;
     justify-content: flex-end;
+    padding: 10px;
 
-    img {
-        width: 64px;
-        height: 64px;
-        margin: 0 29px 0 0;
-        cursor: pointer;
+        .h__spain{
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        }
+
+        .h__uk{
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        }
     }
-}
+
+    .h__game {
+        width: 845px;
+        font-size: 150px;
+    }
+
 
 // .h__img {
 //     width: 800px;
@@ -42,36 +54,50 @@
 // }
 
 .h__footer {
-    width: 90%;
+    width: 70%;
     font-size: 1.5rem;
-    margin-bottom: 50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 
+    .h__home {
+        width: 300px;
+        height: 30px;
+        color: white;
+        
+    }
+    
     .h__characters {
         width: 200px;
         height: 30px;
         color: white;
+        margin-bottom: 70px;
+        
     }
+
 
     .h__houses {
         width: 200px;
         height: 30px;
         color: white;
+        margin-bottom: 70px;
     }
+
 
     .h__chronology {
         width: 200px;
         height: 30px;
         color: white;
+        margin-bottom: 0px;
     }
 }
 
+
+//CHARACTERS PAGE
 .character_h1 {
     text-align: center;
-    padding-top: 50px;
     padding-bottom: 20px;
     font-size: 30px;
 
@@ -79,16 +105,12 @@
 
 .characters_container {
     width: 80%;
-    /* Ancho del contenedor, puedes ajustar según tus necesidades */
     margin: 0 auto;
     margin-right: 70px;
-    padding: 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    // overflow: hidden;
-    // grid-template-rows: repeat(4, 1fr); 
-    // gap: 1px;
 
     .characters_card {
         position: relative;
@@ -102,8 +124,8 @@
 
     img {
         display: block;
-        width: 300px;
-        height: 450px;
+        width: 250px;
+        height: 360px;
         object-fit: cover;
 
     }
@@ -114,7 +136,7 @@
         background-color: #2b2b2b72;
         overflow: hidden;
         bottom: 20px;
-        width: 300px;
+        width: 250px;
         height: 0;
         transition: .3s ease;
         color: white;
@@ -143,70 +165,298 @@ img:hover {
     filter: grayscale(50%);
 }
 
-// Estilo del riel de la barra de desplazamiento
+
+// SIMPLEBAR
 .simplebar-track {
-    background-color: rgba(77, 77, 77, 0.503); // Color de fondo del riel 
-    border-radius: 8px; // Bordes redondeados del riel 
+    background-color: rgba(77, 77, 77, 0.503); 
+    border-radius: 8px;
 }
 
-// Estilo de la barra de desplazamiento
 .simplebar-scrollbar {
-    background-color: #909090; // Color de fondo de la barra de desplazamiento 
-    border-radius: 8px; // Bordes redondeados de la barra de desplazamiento 
+    background-color: #909090; 
+    border-radius: 8px; 
 }
 
-// Cambia el color al hacer hover sobre la barra de desplazamiento 
 .simplebar-scrollbar:hover {
     background-color: #cdcdcd;
 }
 
-.c__characters {
+
+//VOLVER BUTTON
+.h__volver {
+    margin-right: 1200px;
+    width: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+}
+
+//ESTILOS DETAILS CHARACTER
+.characters {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* Ajusta la altura según sea necesario */
-    background-color: #f0f0f0;
-    /* Color de fondo de la pantalla */
+    padding-top: 20px;
+    
+    .character {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    /* Estilo para cada casa */
-    .c__character {
-        background-color: white;
-        margin: 10px;
-        padding: 20px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-
-        /* Estilo para la imagen de la casa */
-        .c__character-image {
-            max-width: 100%;
-            height: auto;
+        .character-image {
+            display: block;
+            width: 250px;
+            height: 360px;
+            object-fit: cover;
         }
 
-        /* Estilo para el nombre de la casa */
-        .c__character-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        /* Estilo para los detalles de la casa */
-        .c__character-details {
+        .character-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
         }
 
-        /* Estilo para los detalles de cada elemento (settlement, region, etc.) */
-        .c__character-details div {
-            margin: 5px 0;
+        .character-name {
+            font-size: 28px;
+            margin-top: 20px;        
+        
+        }
+    }
+
+    .character-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 80%;
+        list-style-type: circle;
+        
+
+        .ci__house {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__alliance {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__episodes {
+            text-align: start;
+            width: 360px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__parents {
+            text-align: start;
+            width: 330px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__siblings {
+            text-align: start;
+            width: 330px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__titles {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
         }
     }
 }
 
-#v__card {
+//FILTER
+#filter {
+    display: flex;
+    justify-content: start;
 
-    div img {
-        border-radius: 50%;
-        width: 64px;
-        height: 64px;
+    img {
+        margin-left: 270px;
+        height: auto;
+    }
+
+    input {
+        margin-left: 10px;
+        width: 240px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.555);
     }
 }
+.c__chronology{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.escalonados{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    element.esIdPar{
+        margin-top: 75px;
+    }
+}
+
+    #c2__chronology{
+
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    border-top: solid white;
+    }
+
+    #c2__chronology.idPar{
+    
+        div p{
+            text-align: center;
+            }
+        }
+
+#v__card{
+
+    p{
+        font-size: 12px;
+    }
+    div img{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    
+
+}
+.simplebar-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+}
+button{
+        border-radius: 50%;
+        border: solid white;
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        color: white;
+        font-size: 8px;
+}
+
+#flecha{
+        height: 40px;
+        width: 50%;
+        border-left: solid white;
+        margin-left: 50%;
+}
+#flec{
+        height: 18px;
+        margin-left: -10px;
+        width: 18px;
+        margin-top: 5px;
+}
+
