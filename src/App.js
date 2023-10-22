@@ -6,7 +6,7 @@ import HousesPage from './Pages/HousesPage/HousesPage'
 import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
 import { withTranslation } from 'react-i18next';
 import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
-
+import DetailsHousesPage from './components/DetailsHousesPage/DetailsHousesPage';
 
 
 function App({ t }) {
@@ -23,7 +23,7 @@ function App({ t }) {
           <Route path="/houses" element={<HousesPage />} />
           <Route path="/chronology" element={<ChronologyPage />} />
           <Route path="/characters/:id" element={<DetailsCharacterPage />} />
-          
+          <Route path="houses/:id" element={<DetailsHousesPage/>} />
         </Routes>
       </Router>
     </body>

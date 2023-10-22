@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
@@ -29,8 +30,10 @@ function HousesPage({ t }) {
                     <div className="house_cards">
                         {houses.map((house, i) => (
                             <div className="house_card" key={i}>
-                                <img className="house_banner" src={house.image} alt="" style={{ width: "70%" }} />
-                                <p>{house.name}</p>
+                                <Link to={`/houses/${house.id}`}>
+                                    <img className="house_banner" src={house.image} alt="" style={{ width: "70%" }} />
+                                    <p>{house.name}</p>
+                                </Link>
                             </div>
                         ))}
                     </div>
