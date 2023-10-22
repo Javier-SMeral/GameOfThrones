@@ -27,12 +27,12 @@
     display: flex;
     justify-content: flex-end;
 
-    img{
+    img {
         margin: 10px;
     }
 }
 
-#mh__head{
+#mh__head {
     display: flex;
     width: 90%;
     margin-left: 60px;
@@ -92,7 +92,7 @@
 
 
 //CHARACTERS PAGE
-#p__character{
+#p__character {
     margin-left: 50px;
 }
 
@@ -464,4 +464,36 @@ button {
     margin-left: -10px;
     width: 18px;
     margin-top: 5px;
+}
+
+.houses_h1 {
+    color: white;
+}
+
+.houses_container {
+    padding: 20px;
+    margin: 156 px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.house_cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.house_card {
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.house_banner {
+    width: 100%;
+}
+
+.house_card p {
+    color: white;
 }
