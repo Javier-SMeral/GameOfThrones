@@ -32,21 +32,13 @@ function CharactersPage({ t }) {
 
     const handleSearch = (searchTerm) => {
         const filtered = characters.filter((character) => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
-
         setFilteredCharacters(filtered);
     }
 
     return (
 
         <div >
-
-                    
-            <div ClassName = "h__volver">
-            
-                
-                <MenuHead />
-            </div>
-            
+            <MenuHead />
             <h1 className="character_h1">{t('ch_page')}</h1>
             <FilterPage onSearch={handleSearch} />
             <SimpleBar style={{ maxHeight: 650, width: '90%' }}>
