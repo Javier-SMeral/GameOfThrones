@@ -465,3 +465,37 @@ button {
     width: 18px;
     margin-top: 5px;
 }
+
+/*HousesPage styles*/
+.houses_h1 {
+    color: white;
+  }
+  
+  .houses_container {
+    padding: 20px;
+    margin: 156 px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .house_cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .house_card {
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .house_banner {
+    width: 100%;
+  }
+  
+  .house_card p {
+    color: white;
+  }
+  /*HousesPage styles end*/
