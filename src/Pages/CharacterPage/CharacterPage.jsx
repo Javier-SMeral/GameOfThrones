@@ -51,8 +51,6 @@ function CharactersPage({ t }) {
             <FilterPage onSearch={handleSearch} />
             <SimpleBar style={{ maxHeight: 650, width: '90%' }}>
             
-            
-
                 <div className="characters_container">
                 {filteredCharacters.map((character, i) => (
                         <div className="characters_card" key={i}>
