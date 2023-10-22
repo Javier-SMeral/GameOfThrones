@@ -1,17 +1,331 @@
 @font-face {
-  font-family: GameOfThrones;
-  src: url("../../../public/assets/Game of Thrones.ttf");
+  font-family: "GameOfThrones";
+  src: url("../../../public/assets/Game_of_Thrones.ttf");
 }
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
-  font-family: GameOfThrones;
+  /* list-style: none; */
+  font-family: "GameOfThrones";
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .c__body {
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(to bottom right, #090909 40%, #2b2b2b, #525252);
+  background-color: black;
+  color: white;
+}
+
+.h__title {
+  width: 100%;
+  height: 100%;
   background-image: url(../../../public/assets/Trono.png);
   background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.h__title .h__game {
+  width: 900px;
+  font-size: 150px;
+}
+
+.h__flag {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.h__flag .h__spain {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.h__flag .h__uk {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.h__game {
+  width: 845px;
+  font-size: 150px;
+}
+
+.h__footer {
+  width: 70%;
+  font-size: 1.5rem;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.h__footer .h__home {
+  width: 300px;
+  height: 30px;
+  color: white;
+}
+.h__footer .h__characters {
+  width: 200px;
+  height: 30px;
+  color: white;
+  margin-bottom: 70px;
+}
+.h__footer .h__houses {
+  width: 200px;
+  height: 30px;
+  color: white;
+  margin-bottom: 70px;
+}
+.h__footer .h__chronology {
+  width: 200px;
+  height: 30px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.character_h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.characters_container {
+  width: 80%;
+  margin: 0 auto;
+  margin-right: 70px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.characters_container .characters_card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.characters_container img {
+  display: block;
+  width: 250px;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.characters_container .character-overlay {
+  text-decoration: none;
+  position: absolute;
+  background-color: rgba(43, 43, 43, 0.4470588235);
+  overflow: hidden;
+  bottom: 20px;
+  width: 250px;
+  height: 0;
+  transition: 0.3s ease;
+  color: white;
+}
+.characters_container .textOverlay {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.characters_card:hover .character-overlay {
+  height: 20%;
+}
+
+img:hover {
+  filter: grayscale(50%);
+}
+
+.simplebar-track {
+  background-color: rgba(77, 77, 77, 0.503);
+  border-radius: 8px;
+}
+
+.simplebar-scrollbar {
+  background-color: #909090;
+  border-radius: 8px;
+}
+
+.simplebar-scrollbar:hover {
+  background-color: #cdcdcd;
+}
+
+.h__volver {
+  margin-right: 1200px;
+  width: 10%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.characters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.characters .character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.characters .character .character-image {
+  display: block;
+  width: 250px;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.characters .character .character-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.characters .character .character-name {
+  font-size: 28px;
+  margin-top: 20px;
+}
+.characters .character-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 80%;
+  list-style-type: circle;
+}
+.characters .character-details .ci__house {
+  text-align: center;
+  width: 250px;
+  margin-right: 50px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__house h3 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+.characters .character-details .ci__house ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__alliance {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__alliance h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__alliance ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__episodes {
+  text-align: start;
+  width: 360px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__episodes h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__episodes ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__parents {
+  text-align: start;
+  width: 330px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__parents h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__parents ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__siblings {
+  text-align: start;
+  width: 330px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__siblings h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__siblings ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+.characters .character-details .ci__titles {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.characters .character-details .ci__titles h3 {
+  font-size: 1.5rem;
+}
+.characters .character-details .ci__titles ul {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  line-height: 25px;
+}
+
+#filter {
+  display: flex;
+  justify-content: start;
+}
+#filter img {
+  margin-left: 270px;
+  height: auto;
+}
+#filter input {
+  margin-left: 10px;
+  width: 240px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.555);
 }/*# sourceMappingURL=index.css.map */

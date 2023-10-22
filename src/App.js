@@ -1,43 +1,33 @@
 import './styles/main/index.css';
-import './App.css';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import CharactersPage from './Pages/CharacterPage/CharacterPage';
 import HousesPage from './Pages/HousesPage/HousesPage'
 import ChronologyPage from './Pages/ChronologyPage/ChronologyPage';
-import Menu from './Components/Menu/Menu';
+import { withTranslation } from 'react-i18next';
+import DetailsCharacterPage from './components/DetailsCharactersPage/DetailsCharacterPage';
 
-function App() {
+
+
+function App({ t }) {
+  
   return (
-    
     <body className='c__body'>
-      <header className='c__header'>
-        <Router>
-          <div className="App">
-            <div className="App-header">
+    
+      <Router>
 
-              <Menu />
-
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/characters" element={<CharactersPage />} />
-                <Route path="/houses" element={<HousesPage />} />
-                <Route path="/chronology" element={<ChronologyPage />} />
-              </Routes>
-
-            </div>
-          </div>
-        </Router>
-    </header>
-      <main className='c__main'>
-
-      </main>
-      <footer className='c__footer'>
-
-      </footer>
-    </body >
-
+      
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/characters" element={<CharactersPage />} />
+          <Route path="/houses" element={<HousesPage />} />
+          <Route path="/chronology" element={<ChronologyPage />} />
+          <Route path="/characters/:id" element={<DetailsCharacterPage />} />
+          
+        </Routes>
+      </Router>
+    </body>
   );
 }
 
-export default App;
+export default withTranslation()(App);
