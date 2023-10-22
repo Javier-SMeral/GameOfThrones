@@ -6,7 +6,9 @@ import MenuHead from "../../components/Menu/MenuHead";
 export default function DetailsCharacterPage() {
     const { id } = useParams();
     const [character, setCharacter] = useState(null);
+
     const [house, setHouse] = useState(null); 
+
     useEffect(() => {
         const getCharacterAndHouse = async () => {
             try {
