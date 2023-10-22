@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import MenuHead from "../../components/Menu/MenuHead";
 
@@ -34,9 +34,14 @@ export default function DetailsCharacterPage() {
     return (
 
         <div>
-
-            <MenuHead />
-
+        <div id='mh__head'>
+            
+            <Link className='h__volver' to="/characters">
+            <img src="/assets/arrowBack.png" alt="arrow" style={{ width: '30px' }}></img>
+            <p>Vuelve</p>
+            </Link>
+            <MenuHead/>
+            </div>
             <div className="characters">
                 <div className="character">
 
