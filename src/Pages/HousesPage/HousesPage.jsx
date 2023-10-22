@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
+import MenuFoot from "../../components/Menu/MenuFoot";
+import MenuHead from "../../components/Menu/MenuHead";
 
-export default function HousesPage() {
+function HousesPage({ t }) {
     const [houses, setHouses] = useState([]);
 
     useEffect(() => {
@@ -19,15 +23,21 @@ export default function HousesPage() {
 
     return (
         <div>
-            <h1>Houses Page</h1>
-            <div className="HouseGallery">
-                {houses.map((house, i) => (
-                    <div className="HouseCard" key={i}>
-                        <img src={house.image} alt="" style={{ width: '248px' }} />
-                        <p>{house.name}</p>
+            <MenuHead />
+            <div className="houses_container">
+                <SimpleBar style={{ maxHeight: 700, width: "80%" }}>
+                    <div className="house_cards">
+                        {houses.map((house, i) => (
+                            <div className="house_card" key={i}>
+                                <img className="house_banner" src={house.image} alt="" style={{ width: "70%" }} />
+                                <p>{house.name}</p>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </SimpleBar>
             </div>
+            <MenuFoot />
         </div>
     )
 }
+export default HousesPage
