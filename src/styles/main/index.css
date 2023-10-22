@@ -30,12 +30,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.h__title .h__game {
-  width: 900px;
-  font-size: 150px;
-}
-
-.h__flag {
+.h__title .h__flag {
   width: 90%;
   display: flex;
   justify-content: flex-end;
@@ -51,8 +46,17 @@
   display: flex;
   justify-content: flex-end;
 }
-
-.h__game {
+.h__title .h__flag .h__spain {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.h__title .h__flag .h__uk {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.h__title .h__game {
   width: 845px;
   font-size: 150px;
 }
@@ -87,7 +91,6 @@
   width: 200px;
   height: 30px;
   color: white;
-  margin-bottom: 0px;
 }
 
 .character_h1 {
@@ -328,4 +331,76 @@ img:hover {
   font-size: 1em;
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+}
+.c__chronology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.escalonados {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.escalonados element.esIdPar {
+  margin-top: 75px;
+}
+
+#c2__chronology {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  border-top: solid white;
+}
+
+#c2__chronology.idPar div p {
+  text-align: center;
+}
+
+#v__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+#v__card p {
+  font-size: 12px;
+}
+#v__card div img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.simplebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border-radius: 50%;
+  border: solid white;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  color: white;
+  font-size: 8px;
+}
+
+#flecha {
+  height: 40px;
+  width: 50%;
+  border-left: solid white;
+  margin-left: 50%;
+}
+
+#flec {
+  height: 18px;
+  margin-left: -10px;
+  width: 18px;
+  margin-top: 5px;
 }/*# sourceMappingURL=index.css.map */
