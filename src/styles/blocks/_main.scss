@@ -2,7 +2,6 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, #090909 40%, #2b2b2b, #525252);
-    background-color: black;
     color: white;
 }
 
@@ -27,25 +26,22 @@
     width: 90%;
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
 
-        .h__spain{
-        width: 90%;
-        display: flex;
-        justify-content: flex-end;
-        }
-
-        .h__uk{
-        width: 90%;
-        display: flex;
-        justify-content: flex-end;
-        }
+    img{
+        margin: 10px;
     }
+}
 
-    .h__game {
-        width: 845px;
-        font-size: 150px;
-    }
+#mh__head{
+    display: flex;
+    width: 90%;
+    margin-left: 60px;
+}
+
+.h__game {
+    width: 845px;
+    font-size: 150px;
+}
 
 
 // .h__img {
@@ -56,25 +52,27 @@
 .h__footer {
     width: 70%;
     font-size: 1.5rem;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-left: 150px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 
+
     .h__home {
         width: 300px;
         height: 30px;
         color: white;
-        
+
     }
-    
+
     .h__characters {
         width: 200px;
         height: 30px;
         color: white;
-        margin-bottom: 70px;
-        
+
     }
 
 
@@ -82,7 +80,6 @@
         width: 200px;
         height: 30px;
         color: white;
-        margin-bottom: 70px;
     }
 
 
@@ -90,14 +87,18 @@
         width: 200px;
         height: 30px;
         color: white;
-        margin-bottom: 0px;
     }
 }
 
 
 //CHARACTERS PAGE
+#p__character{
+    margin-left: 50px;
+}
+
 .character_h1 {
     text-align: center;
+    margin-right: 180px;
     padding-bottom: 20px;
     font-size: 30px;
 
@@ -105,7 +106,6 @@
 
 .characters_container {
     width: 80%;
-    margin: 0 auto;
     margin-right: 70px;
     padding: 10px;
     display: grid;
@@ -119,7 +119,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 20px;
+        padding: 20px;
     }
 
     img {
@@ -168,13 +168,13 @@ img:hover {
 
 // SIMPLEBAR
 .simplebar-track {
-    background-color: rgba(77, 77, 77, 0.503); 
+    background-color: rgba(77, 77, 77, 0.503);
     border-radius: 8px;
 }
 
 .simplebar-scrollbar {
-    background-color: #909090; 
-    border-radius: 8px; 
+    background-color: #909090;
+    border-radius: 8px;
 }
 
 .simplebar-scrollbar:hover {
@@ -202,7 +202,7 @@ img:hover {
     align-items: center;
     justify-content: center;
     padding-top: 20px;
-    
+
     .character {
         display: flex;
         flex-direction: column;
@@ -210,7 +210,7 @@ img:hover {
         align-items: center;
 
         .character-image {
-            display: block;
+            // display: block;
             width: 250px;
             height: 360px;
             object-fit: cover;
@@ -225,8 +225,8 @@ img:hover {
 
         .character-name {
             font-size: 28px;
-            margin-top: 20px;        
-        
+            margin-top: 20px;
+
         }
     }
 
@@ -236,7 +236,7 @@ img:hover {
         align-items: flex-start;
         max-width: 80%;
         list-style-type: circle;
-        
+
 
         .ci__house {
             text-align: center;
@@ -363,7 +363,7 @@ img:hover {
     justify-content: start;
 
     img {
-        margin-left: 270px;
+        margin-left: 170px;
         height: auto;
     }
 
@@ -379,84 +379,89 @@ img:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.555);
     }
 }
-.c__chronology{
 
+.c__chronology {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.escalonados{
+
+.escalonados {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 
-    element.esIdPar{
+    element.esIdPar {
         margin-top: 75px;
     }
 }
 
-    #c2__chronology{
+#c2__chronology {
 
     display: flex;
     flex-direction: column;
     width: 150px;
     height: 150px;
     border-top: solid white;
+}
+
+#c2__chronology.idPar {
+
+    div p {
+        text-align: center;
     }
+}
 
-    #c2__chronology.idPar{
-    
-        div p{
-            text-align: center;
-            }
-        }
+#v__card {
 
-#v__card{
-
-    p{
+    p {
         font-size: 12px;
     }
-    div img{
+
+    div img {
         border-radius: 50%;
         height: 50px;
         width: 50px;
     }
+
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100px;
-    
+
 
 }
-.simplebar-content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+.simplebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
-button{
-        border-radius: 50%;
-        border: solid white;
-        height: 30px;
-        width: 30px;
-        background: transparent;
-        color: white;
-        font-size: 8px;
+
+button {
+    border-radius: 50%;
+    border: solid white;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    color: white;
+    font-size: 8px;
 }
 
-#flecha{
-        height: 40px;
-        width: 50%;
-        border-left: solid white;
-        margin-left: 50%;
-}
-#flec{
-        height: 18px;
-        margin-left: -10px;
-        width: 18px;
-        margin-top: 5px;
+#flecha {
+    height: 40px;
+    width: 50%;
+    border-left: solid white;
+    margin-left: 50%;
 }
 
+#flec {
+    height: 18px;
+    margin-left: -10px;
+    width: 18px;
+    margin-top: 5px;
+}
