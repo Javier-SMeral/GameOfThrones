@@ -4,6 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 const MenuFoot = ({ t }) => {
 
+
     return (
         <div className='h__footer'>
             <Link className='h__characters' to="/characters">{t('characters')}</Link>

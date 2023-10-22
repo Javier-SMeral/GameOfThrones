@@ -27,15 +27,16 @@
     width: 90%;
     display: flex;
     justify-content: flex-end;
+    padding: 10px;
 
         .h__spain{
-            width: 90%;
+        width: 90%;
         display: flex;
         justify-content: flex-end;
         }
 
         .h__uk{
-            width: 90%;
+        width: 90%;
         display: flex;
         justify-content: flex-end;
         }
@@ -54,7 +55,6 @@
 
 .h__footer {
     width: 70%;
-    margin-left: 280px;
     font-size: 1.5rem;
     margin-top: 50px;
     display: flex;
@@ -66,24 +66,29 @@
         width: 300px;
         height: 30px;
         color: white;
+        
     }
     
     .h__characters {
         width: 200px;
         height: 30px;
         color: white;
+        margin-bottom: 70px;
+        
     }
 
     .h__houses {
         width: 200px;
         height: 30px;
         color: white;
+        margin-bottom: 70px;
     }
 
     .h__chronology {
         width: 200px;
         height: 30px;
         color: white;
+        margin-bottom: 0px;
     }
 }
 
@@ -197,12 +202,15 @@ img:hover {
     padding-top: 20px;
     
     .character {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .character-image {
-            margin-left: 50px;
             display: block;
-            width: 150px;
-            height: 260px;
+            width: 250px;
+            height: 360px;
             object-fit: cover;
         }
 
@@ -210,12 +218,12 @@ img:hover {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 20px;
         }
 
         .character-name {
-            font-size: 24px;
-            margin-top: 20px;
-            
+            font-size: 28px;
+            margin-top: 20px;        
         
         }
     }
@@ -230,21 +238,16 @@ img:hover {
 
         .ci__house {
             text-align: center;
-            width: 350px;
+            width: 250px;
+            margin-right: 50px;
             margin-top: 50px;
             display: flex;
             flex-direction: column;
 
-            .detail__img {
-                display: block;
-                margin-left: 80px;
-                width: 200px;
-                height: 300px;
-                object-fit: cover;
-            }
 
             h3 {
                 font-size: 1.5rem;
+                padding-bottom: 10px;
             }
 
             ul {
@@ -276,7 +279,7 @@ img:hover {
 
         .ci__episodes {
             text-align: start;
-            width: 400px;
+            width: 360px;
             margin-top: 50px;
             display: flex;
             flex-direction: column;
@@ -295,7 +298,7 @@ img:hover {
 
         .ci__parents {
             text-align: start;
-            width: 300px;
+            width: 330px;
             margin-top: 50px;
             display: flex;
             flex-direction: column;
@@ -314,7 +317,7 @@ img:hover {
 
         .ci__siblings {
             text-align: start;
-            width: 300px;
+            width: 330px;
             margin-top: 50px;
             display: flex;
             flex-direction: column;
