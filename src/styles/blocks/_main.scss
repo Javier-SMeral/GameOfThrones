@@ -468,6 +468,7 @@ button {
 
 .houses_h1 {
     color: white;
+
 }
 
 .houses_container {
@@ -476,24 +477,26 @@ button {
     display: flex;
     justify-content: center;
     width: 90%;
-}
 
-.house_cards {
+  }
+  
+  .house_cards {
     display: flex;
     flex-wrap: wrap;
-}
-
-.house_card {
+  }
+  
+  .house_card {
     width: 250px;
     margin-bottom: 20px;
     padding: 10px;
     text-align: center;
-}
 
-.house_banner {
+  }
+  
+  .house_banner {
     width: 100%;
-}
-
-.house_card p {
+  }
+  
+  .house_card p {
     color: white;
-}
+  }

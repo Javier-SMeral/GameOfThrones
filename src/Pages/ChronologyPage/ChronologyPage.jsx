@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 import ViewAgeCharacter from "./ViewAgeCharacter";
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
-import { withTranslation } from 'react-i18next';
-import MenuFoot from "../../components/Menu/MenuFoot";
-import MenuHead from "../../components/Menu/MenuHead";
 
 function ChronologyPage() {
   const [infoApi, setInfoApi] = useState([])
@@ -22,24 +19,24 @@ function ChronologyPage() {
 
     setIsOrder(!isOrder);
     const copyCharacter = [...characters];
-    if (!isOrder) {
-      copyCharacter.sort((a, b) => a.age - b.age);
+    if(!isOrder){
+      copyCharacter.sort((a,b) => a.age - b.age);
       cambiarTexto(copyCharacter[1]?.age);
-    } else {
-      copyCharacter.sort((a, b) => b.age - a.age);
-      cambiarTexto(copyCharacter[0]?.age);
-    }
+      }else{
+        copyCharacter.sort((a, b) => b.age - a.age);
+        cambiarTexto(copyCharacter[0]?.age);
+      }
 
-    setCharacters(copyCharacter);
+      setCharacters(copyCharacter);
+      
+    };
 
-  };
+    // const orderCharacter = copyCharacter.sort((a,b) => {
+    //   return b.age - a.age
+    // })
+    // return setCharacters(orderCharacter)
 
-  // const orderCharacter = copyCharacter.sort((a,b) => {
-  //   return b.age - a.age
-  // })
-  // return setCharacters(orderCharacter)
-
-
+  
   const getCharacter = async () => {
     const res = await axios("http://localhost:3000/characters");
     console.log(res.data[0].age);
@@ -50,41 +47,45 @@ function ChronologyPage() {
 
   };
   useEffect(() => {
-
+    
     getCharacter();
-    cambiarTexto('');
+      cambiarTexto('');
   }, []);
 
 
+  
 
-
-
+    
 
   return (
     <div className='c__chronology'>
-      <MenuHead />
-      <button onClick={orderAges}>{textoBoton}</button>
+      <h1>Chronology Page</h1>
+          
+            <button onClick={orderAges}>{textoBoton}</button>
+              
+          <SimpleBar style={{ maxHeight: 400, width: '90%' }}autoHide={true}>
+              <label id='flecha'>
+                <img id='flec'src='../../../assets/Arrow-down.svg.png' alt=''></img>
+              </label>
+            <section className='escalonados'>
 
-      <SimpleBar style={{ maxHeight: 700, width: '90%' }} autoHide={false}>
-        <label id='flecha'>
-          <img id='flec' src='../../../assets/Arrow-down.svg.png' alt=''></img>
-        </label>
-        <section className='escalonados'>
-          {characters?.map((item) => (
-            <div id='c2__chronology' key={item.id}>
-              <ViewAgeCharacter
-                age={item?.age}
-                name={item?.name}
-                img={item?.image} />
-            </div>
 
-          ))}
-        </section>
-      </SimpleBar>
-      <MenuFoot />
+
+                {characters?.map((item) => (
+
+                      <div id='c2__chronology' key={item.id}>
+                      <ViewAgeCharacter
+                          age={item?.age}
+                          name={item?.name}
+                          img={item?.image}/>
+                      </div>
+          
+                ))}
+            </section>
+        </SimpleBar>
     </div>
   );
 }
 
 
-export default withTranslation()(ChronologyPage);
+export default ChronologyPage;
