@@ -380,10 +380,31 @@ img:hover {
     }
 }
 
+
 .c__chronology {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .escalonados {
+        width: 310px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .character-box {
+
+            height: 148px; // Altura de 148px
+            width: 150px; // Ocupa el 150px del contenedor
+            border-top: 2px solid white;
+        }
+
+        .even {
+            border-right: 2px solid white; // Borde blanco a la derecha de los elementos pares
+            width: 150px;
+            border-top: 2px solid white;
+        }
+    }
 
 }
 
@@ -472,31 +493,196 @@ button {
 }
 
 .houses_container {
-    padding: 20px;
+
     margin: 156 px;
     display: flex;
     justify-content: center;
     width: 90%;
 
-  }
-  
-  .house_cards {
+}
+
+.house_cards {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .house_card {
+}
+
+.house_card {
     width: 250px;
     margin-bottom: 20px;
     padding: 10px;
     text-align: center;
 
-  }
-  
-  .house_banner {
+}
+
+.house_banner {
     width: 100%;
-  }
-  
-  .house_card p {
+}
+
+.house_card p {
     color: white;
-  }
+}
+
+//ESTILO DETAILS HOUSES
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../../public/assets/Lato_font/Lato-Regular.ttf');
+}
+
+.houses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .house {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .house-image {
+            width: 267px;
+            height: 320px;
+            margin: 66px 150px 30px 151px;
+        }
+
+        .house-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .house-name {
+            font-size: 28px;
+            margin-top: 20px;
+
+        }
+    }
+
+    .house-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 80%;
+        list-style-type: circle;
+
+
+        .house__settlement {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                font-family: Lato;
+            }
+        }
+
+        .house__region {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                font-family: Lato;
+            }
+        }
+
+        .house__alliances {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            li {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                list-style-type: none;
+                font-family: Lato;
+            }
+        }
+
+        .house__religions {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            li {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                list-style-type: none;
+                font-family: Lato;
+            }
+        }
+
+        .house__foundation {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                font-family: Lato;
+            }
+        }
+
+    }
+}

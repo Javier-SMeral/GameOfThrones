@@ -334,6 +334,22 @@ img:hover {
   flex-direction: column;
   align-items: center;
 }
+.c__chronology .escalonados {
+  width: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.c__chronology .escalonados .character-box {
+  height: 148px;
+  width: 150px;
+  border-top: 2px solid white;
+}
+.c__chronology .escalonados .even {
+  border-right: 2px solid white;
+  width: 150px;
+  border-top: 2px solid white;
+}
 
 .escalonados {
   width: 300px;
@@ -407,7 +423,6 @@ button {
 }
 
 .houses_container {
-  padding: 20px;
   margin: 156 px;
   display: flex;
   justify-content: center;
@@ -433,3 +448,139 @@ button {
 .house_card p {
   color: white;
 }
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../../public/assets/Lato_font/Lato-Regular.ttf");
+}
+.houses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.houses .house {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.houses .house .house-image {
+  width: 267px;
+  height: 320px;
+  margin: 66px 150px 30px 151px;
+}
+.houses .house .house-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.houses .house .house-name {
+  font-size: 28px;
+  margin-top: 20px;
+}
+.houses .house-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 80%;
+  list-style-type: circle;
+}
+.houses .house-details .house__settlement {
+  text-align: center;
+  width: 250px;
+  margin-right: 50px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.houses .house-details .house__settlement h3 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.houses .house-details .house__settlement p {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 25px;
+  font-family: Lato;
+}
+.houses .house-details .house__region {
+  text-align: center;
+  width: 250px;
+  margin-right: 50px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.houses .house-details .house__region h3 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.houses .house-details .house__region p {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 25px;
+  font-family: Lato;
+}
+.houses .house-details .house__alliances {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.houses .house-details .house__alliances h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.houses .house-details .house__alliances li {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 25px;
+  list-style-type: none;
+  font-family: Lato;
+}
+.houses .house-details .house__religions {
+  text-align: start;
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.houses .house-details .house__religions h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.houses .house-details .house__religions li {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 25px;
+  list-style-type: none;
+  font-family: Lato;
+}
+.houses .house-details .house__foundation {
+  text-align: center;
+  width: 250px;
+  margin-right: 50px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.houses .house-details .house__foundation h3 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+.houses .house-details .house__foundation p {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 25px;
+  font-family: Lato;
+}/*# sourceMappingURL=index.css.map */
