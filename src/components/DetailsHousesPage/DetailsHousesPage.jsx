@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import MenuHead from "../Menu/MenuHead";
+import { withTranslation } from 'react-i18next';
 
-export default function DetailsHousesPage() {
+function DetailsHousesPage({ t }) {
     const { id } = useParams();
     const [house, setHouse] = useState(null); 
 
@@ -32,7 +33,7 @@ export default function DetailsHousesPage() {
             
             <Link className='h__volver' to="/houses">
             <img src="/assets/arrowBack.png" alt="arrow" style={{ width: '30px' }}></img>
-            <p>Vuelve</p>
+            <p>{t('goback')}</p>
             </Link>
             <MenuHead/>
             </div>
@@ -53,17 +54,17 @@ export default function DetailsHousesPage() {
                             <div className="house-details">
 
                                 <div className="house__settlement">
-                                    <h3>Settlement </h3>
+                                    <h3>{t('settlement')}</h3>
                                     <p>{house.settlement}</p>
                                 </div>
 
                                 <div className="house__region">
-                                    <h3>Region </h3>
+                                    <h3>{t('region')}</h3>
                                     <p>{house.region}</p>
                                 </div>
                                 
                                 <div className="house__alliances">
-                                    <h3>Alliances </h3>
+                                    <h3>{t('alliances')}</h3>
                                     <p>
                                         {house.alliances.map((alliance, index) => (
                                             <li key={index}>{alliance}</li>
@@ -72,7 +73,7 @@ export default function DetailsHousesPage() {
                                 </div>
                                 
                                 <div className="house__religions">
-                                    <h3>Religions </h3>
+                                    <h3>{t('religions')}</h3>
                                     <p>
                                         {house.religions.map((religion, index) => (
                                             <li key={index}>{religion}</li>
@@ -81,7 +82,7 @@ export default function DetailsHousesPage() {
                                 </div>
 
                                 <div className="house__foundation">
-                                    <h3>Foundation </h3>
+                                    <h3>{t('foundation')}</h3>
                                     <p>{house.foundation}</p>
                                 </div>
 
@@ -93,3 +94,5 @@ export default function DetailsHousesPage() {
         </div>
     )
 }
+
+export default withTranslation()(DetailsHousesPage)

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import MenuHead from "../../components/Menu/MenuHead";
+import { withTranslation } from 'react-i18next';
 
-export default function DetailsCharacterPage() {
+function DetailsCharacterPage({ t }) {
     const { id } = useParams();
     const [character, setCharacter] = useState(null);
 
@@ -38,7 +39,7 @@ export default function DetailsCharacterPage() {
             
             <Link className='h__volver' to="/characters">
             <img src="/assets/arrowBack.png" alt="arrow" style={{ width: '30px' }}></img>
-            <p>Vuelve</p>
+            <p>{t('goback')}</p>
             </Link>
             <MenuHead/>
             </div>
@@ -60,7 +61,7 @@ export default function DetailsCharacterPage() {
                             <div className="character-details">
 
                                 <div className="ci__house">
-                                    <h3>House: </h3>
+                                    <h3>{t('house')}</h3>
                                         {character.house && <img
                                             src={`http://localhost:3000${house.image}`}
                                             alt={house.name}
@@ -68,7 +69,7 @@ export default function DetailsCharacterPage() {
                                 </div>
 
                                 <div className="ci__alliance">
-                                    <h3>Alliances: </h3>
+                                    <h3>{t('alliances')}</h3>
                                     <ul>
                                         {character.alliances.map((alliance, index) => (
                                             <li key={index}>{alliance}</li>
@@ -77,7 +78,7 @@ export default function DetailsCharacterPage() {
                                 </div>
 
                                 <div className="ci__episodes">
-                                    <h3>Episodes: </h3>
+                                    <h3>{t('episodes')}</h3>
                                     <ul>
                                         {character.episodes.map((episode, index) => (
                                             <li key={index}>{episode}</li>
@@ -86,7 +87,7 @@ export default function DetailsCharacterPage() {
                                 </div>
 
                                 <div className="ci__parents">
-                                    <h3>Parents: </h3>
+                                    <h3>{t('parents')}</h3>
                                     <ul>
                                         {character.parents.map((parent, index) => (
                                             <li key={index}>{parent}</li>
@@ -95,7 +96,7 @@ export default function DetailsCharacterPage() {
                                 </div>
 
                                 <div className="ci__siblings">
-                                    <h3>Siblings: </h3>
+                                    <h3>{t('siblings')}</h3>
                                     <ul>
                                         {character.siblings.map((sibling, index) => (
                                             <li key={index}>{sibling}</li>
@@ -104,7 +105,7 @@ export default function DetailsCharacterPage() {
                                 </div>
 
                                 <div className="ci__titles">
-                                    <h3>Titles: </h3>
+                                    <h3>{t('titles')}</h3>
                                     <ul>
                                         {character.titles.map((title, index) => (
                                             <li key={index}>{title}</li>
@@ -119,3 +120,5 @@ export default function DetailsCharacterPage() {
         </div>
     )
 }
+
+export default withTranslation()(DetailsCharacterPage)
