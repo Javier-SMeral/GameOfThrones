@@ -380,10 +380,31 @@ img:hover {
     }
 }
 
+
 .c__chronology {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .escalonados {
+        width: 310px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .character-box {
+
+            height: 148px; // Altura de 148px
+            width: 150px; // Ocupa el 150px del contenedor
+            border-top: 2px solid white;
+        }
+
+        .even {
+            border-right: 2px solid white; // Borde blanco a la derecha de los elementos pares
+            width: 150px;
+            border-top: 2px solid white;
+        }
+    }
 
 }
 
@@ -472,34 +493,34 @@ button {
 }
 
 .houses_container {
-    padding: 20px;
+
     margin: 156 px;
     display: flex;
     justify-content: center;
     width: 90%;
 
-  }
-  
-  .house_cards {
+}
+
+.house_cards {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .house_card {
+}
+
+.house_card {
     width: 250px;
     margin-bottom: 20px;
     padding: 10px;
     text-align: center;
 
-  }
-  
-  .house_banner {
+}
+
+.house_banner {
     width: 100%;
-  }
-  
-  .house_card p {
+}
+
+.house_card p {
     color: white;
-  }
+}
 
 //ESTILO DETAILS HOUSES
 
@@ -513,7 +534,6 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
 
     .house {
         display: flex;
@@ -618,7 +638,7 @@ button {
                 font-family: Lato;
             }
         }
-    
+
         .house__religions {
             text-align: start;
             width: 300px;
