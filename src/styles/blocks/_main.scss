@@ -59,7 +59,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-
+    color: white;
 
     .h__home {
         width: 300px;
@@ -67,27 +67,13 @@
         color: white;
 
     }
-
-    .h__characters {
-        width: 200px;
-        height: 30px;
-        color: white;
-
-    }
-
-
-    .h__houses {
+// HE PUESTO TODOS LAS CLASES DENTRO DE UN BOTON
+    .button {
         width: 200px;
         height: 30px;
         color: white;
     }
 
-
-    .h__chronology {
-        width: 200px;
-        height: 30px;
-        color: white;
-    }
 }
 
 
