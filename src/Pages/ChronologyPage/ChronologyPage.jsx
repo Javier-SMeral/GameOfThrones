@@ -69,7 +69,7 @@ function ChronologyPage() {
       <MenuHead />
       <button onClick={orderAges}>{textoBoton}</button>
 
-      <SimpleBar style={{ maxHeight: 700, width: '100%' }} autoHide={false}>
+      <SimpleBar style={{ maxHeight: 350, width: '90%' }} autoHide={false}>
         <label id='flecha' onClick={toggleArrowState}>
   <img
     id='flec'

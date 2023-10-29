@@ -5,9 +5,10 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
   font-family: "GameOfThrones";
   font-weight: normal;
+  text-decoration: none;
 }
 
 .c__body {
