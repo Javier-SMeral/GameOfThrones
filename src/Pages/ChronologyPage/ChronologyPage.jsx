@@ -8,7 +8,6 @@ import MenuFoot from "../../components/Menu/MenuFoot";
 import MenuHead from "../../components/Menu/MenuHead";
 
 function ChronologyPage() {
-  const [infoApi, setInfoApi] = useState([])
   const [characters, setCharacters] = useState([]);
   const [isOrder, setIsOrder] = useState(false)
   const [textoBoton, setTextoBoton] = useState('O');
@@ -21,22 +20,23 @@ function ChronologyPage() {
   };
 
   const orderAges = () => {
-    
     toggleArrowState();
     setIsOrder(!isOrder);
     const copyCharacter = [...characters];
+
+    const filteredCharacters = copyCharacter.filter(character => character.age !== null);
+
     if (!isOrder) {
-      copyCharacter.sort((a, b) => a.age - b.age);
-      cambiarTexto(copyCharacter[1]?.age);
+        filteredCharacters.sort((a, b) => a.age - b.age);
+        cambiarTexto(filteredCharacters[0]?.age);
     } else {
-      copyCharacter.sort((a, b) => b.age - a.age);
-      cambiarTexto(copyCharacter[0]?.age);
+        filteredCharacters.sort((a, b) => b.age - a.age);
+        cambiarTexto(filteredCharacters[0]?.age);
     }
-     
 
-    setCharacters(copyCharacter);
+    setCharacters(filteredCharacters);
+};
 
-  };
 
   const toggleArrowState = () => {
     setArrowState(!arrowState);
@@ -47,22 +47,15 @@ function ChronologyPage() {
   const getCharacter = async () => {
     const res = await axios("http://localhost:3000/characters");
     const ParesImpares = res.data.map((item, index) => ({
-      ...item,
-      isEven: index % 2 === 0,
+      ...item
     }));;
    
     console.log(ParesImpares);
     
-    setInfoApi(res.data);
     setCharacters(res.data);
     cambiarTexto(res.data='O');
-    setCharacters(ParesImpares);
-
-
-    
+    setCharacters(ParesImpares); 
   };
-
-
 
 
   useEffect(() => {
@@ -71,16 +64,12 @@ function ChronologyPage() {
   }, []);
 
 
-
-
-
-
   return (
-    <div className='c__chronology'>
+    <div className='c__chronology timeLine'>
       <MenuHead />
       <button onClick={orderAges}>{textoBoton}</button>
 
-      <SimpleBar style={{ maxHeight: 700, width: '90%' }} autoHide={false}>
+      <SimpleBar style={{ maxHeight: 350, width: '90%' }} autoHide={false}>
         <label id='flecha' onClick={toggleArrowState}>
   <img
     id='flec'
@@ -88,12 +77,12 @@ function ChronologyPage() {
     alt=''
   />
 </label>
-        <section className='escalonados character-container'>
+        <section>
+        <div className='timeLine'>
         
           {characters?.map((item, index) => (
             <div
-          key={item.id}
-      className={`character-box ${item.isEven ? 'even' : 'character-box'}`}
+          key={index} className={(index%2===0)? 'container left' : 'container right'}
         >
 
               <ViewAgeCharacter
@@ -103,6 +92,7 @@ function ChronologyPage() {
             </div>
 
           ))}
+          </div>
         </section>
       </SimpleBar>
       <MenuFoot />
