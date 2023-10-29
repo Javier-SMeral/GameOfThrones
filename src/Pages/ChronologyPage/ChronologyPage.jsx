@@ -3,89 +3,102 @@ import React, { useEffect, useState } from "react";
 import ViewAgeCharacter from "./ViewAgeCharacter";
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import { withTranslation } from 'react-i18next';
+import MenuFoot from "../../components/Menu/MenuFoot";
+import MenuHead from "../../components/Menu/MenuHead";
 
 function ChronologyPage() {
-  const [ infoApi, setInfoApi ] = useState([])
   const [characters, setCharacters] = useState([]);
   const [isOrder, setIsOrder] = useState(false)
   const [textoBoton, setTextoBoton] = useState('O');
+  const [arrowState, setArrowState] = useState(true);
 
 
   const cambiarTexto = (edad) => {
     setIsOrder(!isOrder);
     setTextoBoton(`${edad}`);
   };
-  const orderAges = () => {
 
+  const orderAges = () => {
+    toggleArrowState();
     setIsOrder(!isOrder);
     const copyCharacter = [...characters];
-    if(!isOrder){
-      copyCharacter.sort((a,b) => a.age - b.age);
-      cambiarTexto(copyCharacter[1]?.age);
-      }else{
-        copyCharacter.sort((a, b) => b.age - a.age);
-        cambiarTexto(copyCharacter[0]?.age);
-      }
 
-      setCharacters(copyCharacter);
-      
-    };
+    const filteredCharacters = copyCharacter.filter(character => character.age !== null);
 
-    // const orderCharacter = copyCharacter.sort((a,b) => {
-    //   return b.age - a.age
-    // })
-    // return setCharacters(orderCharacter)
+    if (!isOrder) {
+        filteredCharacters.sort((a, b) => a.age - b.age);
+        cambiarTexto(filteredCharacters[0]?.age);
+    } else {
+        filteredCharacters.sort((a, b) => b.age - a.age);
+        cambiarTexto(filteredCharacters[0]?.age);
+    }
 
-  
+    setCharacters(filteredCharacters);
+};
+
+
+  const toggleArrowState = () => {
+    setArrowState(!arrowState);
+
+   };
+
+
   const getCharacter = async () => {
     const res = await axios("http://localhost:3000/characters");
-    console.log(res.data[0].age);
-    setInfoApi(res.data);
-    setCharacters(res.data);
-    cambiarTexto(res.data[0]?.age);
-
-
-  };
-  useEffect(() => {
+    const ParesImpares = res.data.map((item, index) => ({
+      ...item
+    }));;
+   
+    console.log(ParesImpares);
     
+    setCharacters(res.data);
+    cambiarTexto(res.data='O');
+    setCharacters(ParesImpares); 
+  };
+
+
+  useEffect(() => {
     getCharacter();
-      cambiarTexto('');
+    cambiarTexto('');
   }, []);
 
 
-  
-
-    
-
   return (
-    <div className='c__chronology'>
-      <h1>Chronology Page</h1>
-          
-            <button onClick={orderAges}>{textoBoton}</button>
-              
-          <SimpleBar style={{ maxHeight: 400, width: '90%' }}autoHide={true}>
-              <label id='flecha'>
-                <img id='flec'src='../../../assets/Arrow-down.svg.png' alt=''></img>
-              </label>
-            <section className='escalonados'>
+    <div className='c__chronology timeLine'>
+      <MenuHead />
+      <button onClick={orderAges}>{textoBoton}</button>
 
+      <SimpleBar style={{ maxHeight: 700, width: '100%' }} autoHide={false}>
+        <label id='flecha' onClick={toggleArrowState}>
+  <img
+    id='flec'
+    src={arrowState ? '../../../assets/flechaArriba.png' : '../../../assets/flechaAbajo.png'}
+    alt=''
+  />
+</label>
+        <section>
+        <div className='timeLine'>
+        
+          {characters?.map((item, index) => (
+            <div
+          key={index} className={(index%2===0)? 'container left' : 'container right'}
+        >
 
+              <ViewAgeCharacter
+                age={item?.age}
+                name={item?.name}
+                img={item?.image}/>
+            </div>
 
-                {characters?.map((item) => (
-
-                      <div id='c2__chronology' key={item.id}>
-                      <ViewAgeCharacter
-                          age={item?.age}
-                          name={item?.name}
-                          img={item?.image}/>
-                      </div>
-          
-                ))}
-            </section>
-        </SimpleBar>
+          ))}
+          </div>
+        </section>
+      </SimpleBar>
+      <MenuFoot />
     </div>
   );
 }
 
 
-export default ChronologyPage;
+export default withTranslation()(ChronologyPage);

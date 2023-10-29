@@ -2,7 +2,6 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, #090909 40%, #2b2b2b, #525252);
-    background-color: black;
     color: white;
 }
 
@@ -17,35 +16,33 @@
     justify-content: space-between;
     align-items: center;
 
-    .h__flag {
-        width: 90%;
-        display: flex;
-        justify-content: flex-end;
-
-        .h__spain{
-            width: 90%;
-        display: flex;
-        justify-content: flex-end;
-        }
-
-        .h__uk{
-            width: 90%;
-        display: flex;
-        justify-content: flex-end;
-        }
-    }
-
     .h__game {
-        width: 845px;
+        width: 900px;
         font-size: 150px;
     }
 }
 
-// .h__flag img {
-//     width: 64px;
-//     height: 64px;
-//     margin: 0 29px 0 0;
-// }
+.h__flag {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        margin: 10px;
+    }
+}
+
+#mh__head {
+    display: flex;
+    width: 90%;
+    margin-left: 60px;
+}
+
+.h__game {
+    width: 845px;
+    font-size: 150px;
+}
+
 
 // .h__img {
 //     width: 800px;
@@ -53,32 +50,39 @@
 // }
 
 .h__footer {
-    width: 90%;
+    width: 70%;
     font-size: 1.5rem;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-left: 150px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 
+
     .h__home {
         width: 300px;
         height: 30px;
         color: white;
+
     }
-    
+
     .h__characters {
         width: 200px;
         height: 30px;
         color: white;
+
     }
-    
+
+
     .h__houses {
         width: 200px;
         height: 30px;
         color: white;
     }
-    
+
+
     .h__chronology {
         width: 200px;
         height: 30px;
@@ -86,9 +90,15 @@
     }
 }
 
+
+//CHARACTERS PAGE
+#p__character {
+    margin-left: 50px;
+}
+
 .character_h1 {
     text-align: center;
-    padding-top: 50px;
+    margin-right: 180px;
     padding-bottom: 20px;
     font-size: 30px;
 
@@ -96,16 +106,11 @@
 
 .characters_container {
     width: 80%;
-    /* Ancho del contenedor, puedes ajustar según tus necesidades */
-    margin: 0 auto;
     margin-right: 70px;
-    padding: 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    // overflow: hidden;
-    // grid-template-rows: repeat(4, 1fr); 
-    // gap: 1px;
 
     .characters_card {
         position: relative;
@@ -114,13 +119,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 20px;
+        padding: 20px;
     }
 
     img {
         display: block;
-        width: 300px;
-        height: 450px;
+        width: 250px;
+        height: 360px;
         object-fit: cover;
 
     }
@@ -131,7 +136,7 @@
         background-color: #2b2b2b72;
         overflow: hidden;
         bottom: 20px;
-        width: 300px;
+        width: 250px;
         height: 0;
         transition: .3s ease;
         color: white;
@@ -161,101 +166,527 @@ img:hover {
 }
 
 
-// Estilo del riel de la barra de desplazamiento
+// SIMPLEBAR
 .simplebar-track {
-    background-color: rgba(77, 77, 77, 0.503); // Color de fondo del riel 
-    border-radius: 8px; // Bordes redondeados del riel 
+    background-color: rgba(77, 77, 77, 0.503);
+    border-radius: 8px;
 }
 
-// Estilo de la barra de desplazamiento
 .simplebar-scrollbar {
-    background-color: #909090; // Color de fondo de la barra de desplazamiento 
-    border-radius: 8px; // Bordes redondeados de la barra de desplazamiento 
+    background-color: #909090;
+    border-radius: 8px;
 }
 
-// Cambia el color al hacer hover sobre la barra de desplazamiento 
 .simplebar-scrollbar:hover {
     background-color: #cdcdcd;
 }
 
-.c__chronology{
 
+//VOLVER BUTTON
+.h__volver {
+    margin-right: 1200px;
+    width: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+}
+
+//ESTILOS DETAILS CHARACTER
+.characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+    .character {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .character-image {
+            // display: block;
+            width: 250px;
+            height: 360px;
+            object-fit: cover;
+        }
+
+        .character-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .character-name {
+            font-size: 28px;
+            margin-top: 20px;
+
+        }
+    }
+
+    .character-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 80%;
+        list-style-type: circle;
+
+
+        .ci__house {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__alliance {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__episodes {
+            text-align: start;
+            width: 360px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__parents {
+            text-align: start;
+            width: 330px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__siblings {
+            text-align: start;
+            width: 330px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__titles {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+//FILTER
+#filter {
+    display: flex;
+    justify-content: start;
+
+    img {
+        margin-left: 170px;
+        height: auto;
+    }
+
+    input {
+        margin-left: 10px;
+        width: 240px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+    }
+}
+
+
+.c__chronology {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-}
-.escalonados{
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 
 
-    element.esIdPar{
-        margin-top: 75px;
-    }
 }
 
-    #c2__chronology{
+
+
+#c2__chronology {
 
     display: flex;
     flex-direction: column;
     width: 150px;
     height: 150px;
-    border-top: solid white;
-    }
+    // border-top: solid white;
+}
 
-    #c2__chronology.idPar{
-    
-        div p{
-            text-align: center;
-            }
-        }
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color:white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+.container {
+    position: relative;
+    background-color: inherit;
+    width: 100%;
 
-#v__card{
+}
+.left {
+    left: -93px;
+    border-top: 3px solid;
+    border-right: 3px solid;
 
-    p{
+ 
+}
+.right {
+    left: 90px;
+    border-top: 3px solid;
+    border-left: 3px solid;
+}
+.right::after {
+    left: -16px;
+}
+
+
+#v__card {
+
+    p {
         font-size: 12px;
     }
-    div img{
+
+    div img {
         border-radius: 50%;
         height: 50px;
         width: 50px;
     }
+
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100px;
-    
+
 
 }
-.simplebar-content{
+
+.simplebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+button {
+    border-radius: 50%;
+    border: solid white;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    color: white;
+    font-size: 8px;
+}
+
+#flecha {
+    height: 40px;
+    width: 50%;
+    border-left: solid white;
+    margin-left: 50%;
+}
+
+#flec {
+    height: 18px;
+    margin-left: -10px;
+    width: 18px;
+    margin-top: 5px;
+}
+
+.houses_h1 {
+    color: white;
+
+}
+
+.houses_container {
+
+    margin: 156 px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+
+}
+
+.house_cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.house_card {
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.house_banner {
+    width: 100%;
+}
+
+.house_card p {
+    color: white;
+}
+
+//ESTILO DETAILS HOUSES
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../../public/assets/Lato_font/Lato-Regular.ttf');
+}
+
+.houses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .house {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
-}
-button{
-        border-radius: 50%;
-        border: solid white;
-        height: 30px;
-        width: 30px;
-        background: transparent;
-        color: white;
-        font-size: 8px;
-}
+        .house-image {
+            width: 267px;
+            height: 320px;
+            margin: 66px 150px 30px 151px;
+        }
 
-#flecha{
-        height: 40px;
-        width: 50%;
-        border-left: solid white;
-        margin-left: 50%;
-}
-#flec{
-        height: 18px;
-        margin-left: -10px;
-        width: 18px;
-        margin-top: 5px;
-}
+        .house-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
 
+        .house-name {
+            font-size: 28px;
+            margin-top: 20px;
+
+        }
+    }
+
+    .house-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 80%;
+        list-style-type: circle;
+
+
+        .house__settlement {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                font-family: Lato;
+            }
+        }
+
+        .house__region {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                font-family: Lato;
+            }
+        }
+
+        .house__alliances {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            li {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                list-style-type: none;
+                font-family: Lato;
+            }
+        }
+
+        .house__religions {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            li {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                list-style-type: none;
+                font-family: Lato;
+            }
+        }
+
+        .house__foundation {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 1rem;
+                line-height: 25px;
+                font-family: Lato;
+            }
+        }
+
+    }
+}
