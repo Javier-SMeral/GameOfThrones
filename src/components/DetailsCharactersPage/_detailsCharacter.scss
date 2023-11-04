@@ -1,0 +1,158 @@
+
+//ESTILOS DETAILS CHARACTER
+.characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+    .character {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .character-image {
+            width: 250px;
+            height: 360px;
+            object-fit: cover;
+        }
+
+        .character-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .character-name {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+    }
+
+    .character-details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 80%;
+        list-style-type: circle;
+
+        .ci__house {
+            text-align: center;
+            width: 250px;
+            margin-right: 50px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__alliance {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__episodes {
+            text-align: start;
+            width: 360px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__parents {
+            text-align: start;
+            width: 330px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__siblings {
+            text-align: start;
+            width: 330px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+
+        .ci__titles {
+            text-align: start;
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                text-align: left;
+                padding-top: 10px;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+        }
+    }
+}

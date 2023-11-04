@@ -15,7 +15,7 @@ function FilterHouse({ onSearch, t }) {
             <img src="../../../assets/icons8-lupa-30.png" alt="" />
             <input 
                 type="text"
-                placeholder={t('searchhouse')}
+                placeholder={t('Search House')}
                 value={searchTerm}
                 onChange={handleSearch}
             />

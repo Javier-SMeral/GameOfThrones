@@ -1,0 +1,46 @@
+
+.h__home {
+    width: 300px;
+    height: 30px;
+    color: white;
+}
+
+.h__flag {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        margin: 10px;
+    }
+}
+
+.h__footer {
+    width: 70%;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-left: 150px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .h__characters {
+        width: 200px;
+        height: 30px;
+        color: white;
+    }
+
+    .h__houses {
+        width: 200px;
+        height: 30px;
+        color: white;
+    }
+
+    .h__chronology {
+        width: 200px;
+        height: 30px;
+        color: white;
+    }
+}

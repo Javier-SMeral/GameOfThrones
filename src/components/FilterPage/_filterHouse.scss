@@ -1,0 +1,23 @@
+
+//FILTER
+#filter {
+    display: flex;
+    justify-content: start;
+
+    img {
+        margin-left: 170px;
+        height: auto;
+    }
+
+    input {
+        margin-left: 10px;
+        width: 240px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+    }
+}

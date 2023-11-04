@@ -15,7 +15,7 @@ function FilterPage({ onSearch, t }) {
             <img src="../../../assets/icons8-lupa-30.png" alt="" />
             <input 
                 type="text"
-                placeholder={t('search')}
+                placeholder={t('Search')}
                 value={searchTerm}
                 onChange={handleSearch}
             />

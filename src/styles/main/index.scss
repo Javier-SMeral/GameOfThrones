@@ -1,3 +1,13 @@
 @import "../base/_reset";
 
+@import "../../components/Menu/menu";
+@import "../../Pages/ChronologyPage/chronology";
+@import "../../Pages/CharacterPage/character";
+@import "../../Pages/HomePage/homepage";
+@import "../../Pages/HousesPage/houses";
+@import "../../components/DetailsCharactersPage/detailsCharacter";
+@import "../../components/DetailsHousesPage/detailsHouses";
+@import "../../components/FilterPage/filterHouse";
+
+
 @import "../blocks/_main";
